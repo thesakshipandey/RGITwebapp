@@ -15,3 +15,6 @@
   * Migrate the changes to the database `$ python manage.py migrate`
   * Create admin `$ python manage.py createsuperuser`
   * Run the server `$ python manage.py runserver`
+
+### Sample
+<img src = "sample.jpg">
