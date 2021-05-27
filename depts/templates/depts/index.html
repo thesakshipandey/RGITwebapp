@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -19,6 +18,7 @@
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -48,7 +48,7 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">mctrgit.ac.in</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>1234567890</span></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9123456780</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bx bx-twitter"></i></a>
@@ -71,31 +71,22 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="active" href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="#">Management</a></li>
+          <li class="dropdown"><a href="{% url 'dept' %}"><span>Departments</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="{% url 'FE' %}">Applied Science and Humanities</a></li>
+              <li><a href="{% url 'comp' %}">Computer Engineering</a></li>
+              <li><a href="{% url 'IT' %}">Information Technology</a></li>
+              <li><a href="{% url 'EXTC' %}">Electronic and Telecommunication</a></li>
+              <li><a href="{% url 'mech' %}">Mechanical Engineering</a></li>
+              <li><a href="{% url 'instru' %}">Instrumentation Engineering</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Alumni</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -125,7 +116,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url(assets/img/slide/slide-2.jpg)">
+          <!-- <div class="carousel-item" style="background: url(assets/img/slide/slide-2.jpg)">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated fanimate__adeInDown">Lorem <span>Ipsum Dolor</span></h2>
@@ -133,10 +124,10 @@
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url(assets/img/slide/slide-3.jpg)">
+          <!-- <div class="carousel-item" style="background: url(assets/img/slide/slide-3.jpg)">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Sequi ea <span>Dime Lara</span></h2>
@@ -144,7 +135,7 @@
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -169,22 +160,19 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="icon-box">
-              <i class="bi bi-card-checklist"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
+              <h3><a href="">Training and Placements</a></h3>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="icon-box">
-              <i class="bi bi-bar-chart"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
+              <h3><a href="">Events</a></h3>
               <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h3><a href="">Sed ut perspiciatis</a></h3>
+              <h3><a href="">Committees</a></h3>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
@@ -199,23 +187,25 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{% static 'img/principal.png' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <p>
+
+            </p>
+            <h3>Our Principal</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Dr. Sanjay U. Bokade
+            </p>
+            <p class="fst-italic">
+              Ph.D.(Tech), M.E.(Mfg. Tech), B.E.(Production)
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li> </li>
+              <li></i><strong> About</strong></li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
         </div>
@@ -231,7 +221,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-search"></i></div>
-              <h4><a href="">Applied Science and Humanities</a></h4>
+              <h4><a href="{% url 'FE' %}">Applied Science and Humanities</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div>
@@ -239,7 +229,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-chip"></i></div>
-              <h4><a href="">Computer</a></h4>
+              <h4><a href="{% url 'comp' %}">Computer</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div>
@@ -247,7 +237,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-code-block"></i></div>
-              <h4><a href="">Information Technology</a></h4>
+              <h4><a href="{% url 'IT' %}">Information Technology</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
@@ -255,7 +245,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-plug"></i></div>
-              <h4><a href="">Electronic and Telecommunication</a></h4>
+              <h4><a href="{% url 'EXTC' %}">Electronic and Telecommunication</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
@@ -263,7 +253,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-wrench"></i></div>
-              <h4><a href="">Mechanical</a></h4>
+              <h4><a href="{% url 'mech' %}">Mechanical</a></h4>
               <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
             </div>
           </div>
@@ -271,7 +261,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Instrumentation</a></h4>
+              <h4><a href="{% url 'instru' %}">Instrumentation</a></h4>
               <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
@@ -281,35 +271,91 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
+    <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title">
-          <h2>Clients</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Gallery</h2>
         </div>
 
-        <div class="clients-slider swiper-container">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/home1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Go Green Day "Planting"</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'img/home1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/home2.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Clean Up Drive</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'img/home2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/home3.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Yoga Camp</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'img/home3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/home4.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Zodiac</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'img/home4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/home5.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Zodiac</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'img/home5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/home7.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Principal felicitate to Jaya Rao Ma'am</h4>
+                <div class="portfolio-links">
+                  <a href="{% static 'img/home7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
-
-    <div class="col-lg-5 d-flex align-items-stretch">
-      <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-    </div>
+    </section><!-- End Portfolio Section -->
 
   </main><!-- End #main -->
 
@@ -320,7 +366,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h4>Our Newsletter</h4>
+            <h4>Turing</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
           </div>
           <div class="col-lg-6">
@@ -336,48 +382,34 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              RGIT campus <br>
+              Versova, Mumbai 400061<br>
+              Maharashtra <br><br>
+              <strong>Phone:</strong> +91 9123456780<br>
+              <strong>Email:</strong> example@mctrgit.ac.in<br>
             </p>
 
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Eterna</h3>
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h3>About RGIT</h3>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
@@ -388,14 +420,12 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>RGIT 2021</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <!-- Designed by <a href="#">BootstrapMade</a> -->
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -403,16 +433,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 
