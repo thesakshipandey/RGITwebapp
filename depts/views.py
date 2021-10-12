@@ -32,3 +32,6 @@ def dept(request):
 
 def compstaff(request):
     return render(request, 'depts/staff.html')
+
+def ITstaff(request):
+    return render(request, 'depts/ITstaff.html')
