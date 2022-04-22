@@ -1,0 +1,1 @@
+web: gunicorn RGITwebapp.wsgi --log-file -
