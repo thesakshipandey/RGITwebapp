@@ -12,6 +12,7 @@
 - Install virtualenv `$ pip3 install virtualenv`
 - Create a virtual environment `$ virtualenv env -p python`
 - Activate the env: `$ source env/bin/activate` (for linux) `> .\env\Scripts\activate` (for Windows PowerShell)
+- Change the Django version `$ pip install --upgrade django==3.2`
 - Make migrations `$ python manage.py makemigrations`
 - Migrate the changes to the database `$ python manage.py migrate`
 - Create admin `$ python manage.py createsuperuser`
